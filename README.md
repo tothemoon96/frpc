@@ -16,17 +16,11 @@ export DOCKER_HOST_IP=$(route -n | awk '/UG[ \t]/{print $2}')
 
 ### **frpc.ini**里使用环境变量
 
-```
+```ini
 # frpc.ini
 [common]
 server_addr = {{ .Envs.FRP_SERVER_ADDR }}
 server_port = 7000
-
-[ssh]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 22
-remote_port = {{ .Envs.FRP_SSH_REMOTE_PORT }}
 ```
 
 ### Linux 服务器 docker 安装
