@@ -8,6 +8,7 @@
 ```shell
 export DOCKER_HOST_IP=$(route -n | awk '/UG[ \t]/{print $2}')
 ```
+
 ### **frpc.ini**里使用环境变量
 ```ini
 # frpc.ini
@@ -21,6 +22,7 @@ local_ip = 127.0.0.1
 local_port = 22
 remote_port = {{ .Envs.FRP_SSH_REMOTE_PORT }}
 ```
+
 ### Linux 服务器 docker 安装
 为避免因 **frpc.ini** 文件的挂载,格式或者配置的错误导致容器无法正常运行并循环重启.请确保先配置好 **frpc.ini** 后在运行启动.
 执行以下命令启动服务
