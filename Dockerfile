@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER tothemoon96 <hanweiguang1@gmail.com>
 
 WORKDIR /
-ENV FRP_VERSION 0.36.0
+ENV FRP_VERSION 0.37.1
 
 RUN set -x && \
 	wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \
